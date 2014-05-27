@@ -138,7 +138,6 @@
     <Compile Include="ViewModels\IModelToViewModel.cs" />
     <Compile Include="ViewModels\IViewBuilder.cs" />
     <Compile Include="ViewModels\IViewModelBuilder.cs" />
-    <Compile Include="ViewModels\ModelToViewModelMapper.cs" />
     <Compile Include="ViewModels\VmModelToViewModel.cs" />
   </ItemGroup>
   <ItemGroup>

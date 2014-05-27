@@ -2,6 +2,7 @@
 using System.Collections.Specialized;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Shapes;
 using Plato.ViewModels;
 using Trollveggen;
 
@@ -112,6 +113,12 @@ namespace Plato.Rendering
                         for (var i = index; i < index + e.NewItems.Count; i++)
                         {
                             var m = GetOrCreateView(ViewModelManager.ViewModels[i]);
+                            // This is to avoid adding duplicate items in the course of e.g. swapping
+                            if (Canvas.Children.Contains(m))
+                            {
+                                var iremove = Canvas.Children.IndexOf(m);
+                                Canvas.Children[iremove] = new Line();// should be temporary
+                            }
                             Canvas.Children[i] = m;
                         }
                         break;
