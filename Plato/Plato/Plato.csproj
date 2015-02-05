@@ -141,7 +141,7 @@
     <Compile Include="ViewModels\VmModelToViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\Trollveggen\Trollveggen.git\Trollveggen\Trollveggen.csproj">
+    <ProjectReference Include="..\..\..\Trollveggen\Trollveggen\Trollveggen.csproj">
       <Project>{787a5640-f3bc-4b2e-b2e4-ab8c1dc1a1e0}</Project>
       <Name>Trollveggen</Name>
     </ProjectReference>
