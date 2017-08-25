@@ -1,7 +1,6 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using Windows.UI.Xaml;
-using Plato.Annotations;
 using Plato.ModelProvisioning;
 using Plato.Models;
 
@@ -55,7 +54,6 @@ namespace Plato.ViewModels
         ///  Thereofre this method is likely to be invoked in responds to model change
         ///  and the auto completion feature the attribute provides is not so useful
         /// </remarks>
-        [NotifyPropertyChangedInvocator]
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             var handler = PropertyChanged;
